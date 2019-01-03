@@ -35,13 +35,13 @@ body_elem = driver.find_element_by_tag_name('body')
     body_elem.send_keys(Keys.HOME)
     sleep(2)
 '''
+
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 sleep(5)
 # find all heart links
 hearts = driver.find_elements_by_xpath("//span[@class='fr66n']")
 print(range(len(hearts)))
-
 
 for h in range(len(hearts)):
     try:
@@ -53,3 +53,4 @@ for h in range(len(hearts)):
         print(str(counter) + "/" + str(len(hearts)))
     except exceptions.StaleElementReferenceException as e:
         raise e
+
