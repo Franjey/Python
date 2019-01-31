@@ -1,3 +1,7 @@
+""" This program is used to automatically like pictures on Instagram
+
+Francisco Jurado"""
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
