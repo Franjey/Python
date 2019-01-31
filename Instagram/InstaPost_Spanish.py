@@ -1,4 +1,6 @@
-# Instagram en Español
+""" This program is used to automatically like pictures on Instagram.  Instagram in Spanish.
+
+Francisco Jurado"""
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
