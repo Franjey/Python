@@ -1,4 +1,4 @@
-""" This program is used to automatically publish pictures on Instagram
+""" This program is used to automatically publish pictures on Instagram. Instagram in Spanish.
 
 Francisco Jurado"""
 
