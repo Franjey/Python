@@ -67,7 +67,7 @@ x = "\\".join(x)  # C:\Users\Francisco\PycharmProjects\Instagram\Pictures\
 x_dir = os.listdir(x)
 
 # Iterates over the subfolder files and concatenates the subfolder path with the file names, creating a file relative path
-# It also ignores the .txt files, because that one is supposed to keep a log of the uploaded ones.
+# It also ignores the .txt files, because that one is supposed to keep a log of the uploaded pictures (and not actually get posted).
 for i, counter in enumerate(range(len(x_dir))):
     if x_dir[i].endswith(".txt"):
         pass
