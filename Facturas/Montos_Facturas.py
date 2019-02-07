@@ -4,11 +4,6 @@ import re
 from openpyxl import Workbook
 
 '''
-Programador: Francisco Jurado
-Fecha: 31 de Diciembre de 2018
-
-Descripción: El programa lee las facturas de la AFIP en formato PDF, obtiene sus montos y los copia/pega en un Excel
-
 Lógica:
 1. Fijarse si la factura es en dolares o pesos
 2. Fijarse el tipo/codigo de la factura: Factura A o B, y codigo 01 o 06
