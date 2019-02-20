@@ -1,13 +1,19 @@
 import PyPDF2
 import os
 import re
-from openpyxl import Workbook
+from openpyxl import Workbook, load_workbook
 
 '''
-Lógica:
-1. Fijarse si la factura es en dolares o pesos
-2. Fijarse el tipo/codigo de la factura: Factura A o B, y codigo 01 o 06
+Instrucciones básicas:
+-  Dentro de la carpeta donde va a guardarse el programa, crear una subcarpeta llamada "Archivos".  Guardar las facturas allí.
+-  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx"
+-  Ajustar el directorio en la línea 32
+
+Contempla:
+-  Facturas en dólares o pesos.  
+-  Tipo/código de factura:  Factura A o B, y código 01 o 06.
 '''
+
 i = 1
 
 importe_list = []
@@ -26,7 +32,7 @@ def invoice_path(invoice_name):
     return path
 
 # ----- Distinción entre facturas en Dólares y Pesos, y armado de listas -----
-for root, dirs, files in os.walk('C:/Users/Francisco/PycharmProjects/Project_FDJ/Archivos/'):
+for root, dirs, files in os.walk('C:/Users/FRANCISCODIEGOJurado/PycharmProjects/IBM_SQL/Archivos/'):
     for file in files:
         if file.endswith('.pdf'):
             path = os.path.join(root, file)
@@ -50,7 +56,7 @@ for i in facturas_pesos:
     for x in facturas_usd:
         if x in facturas_pesos:
             facturas_pesos.remove(x)
-#   print(list(set(facturas_pesos)))
+# print(list(set(facturas_pesos)))
 
 # ----- Inicio: Facturas en Dólares -----
 for i in list(set(facturas_usd)):
@@ -130,13 +136,13 @@ importe_list = [float(i) for i in importe_list]
 print(importe_list)
 
 # ----- Excel -----
-wb = Workbook()
+wb = load_workbook("Contenedor.xlsx")
 ws = wb.active
+sheet = wb["Sheet1"]
 
 i = 1
 while i <= len(importe_list):
     for c in range(len(importe_list)):
         ws.cell(i, 1, importe_list[c])
         i = i + 1
-
-wb.save("Workbook1.xlsx")
+        wb.save("Contenedor.xlsx")
