@@ -1,3 +1,6 @@
+Requiere instalar los módulos:
+-  PyPDF2, os, re y openpyxl
+
 Instrucciones básicas:
 -  Dentro de la carpeta donde va a guardarse el programa, crear una subcarpeta llamada "Archivos".  Guardar las facturas allí.
 -  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx".  En éste, se copiaran los montos de las facturas.
