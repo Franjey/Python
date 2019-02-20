@@ -8,7 +8,7 @@ General: Extrae los montos de las facturas y los copia en un excel.
 
 Instrucciones básicas:
 -  Dentro de la carpeta donde va a guardarse el programa, crear una subcarpeta llamada "Archivos".  Guardar las facturas allí.
--  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx"
+-  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx".  En éste, se copiaran los montos de las facturas.
 -  Ajustar el directorio en la línea 37
 
 Contempla:
