@@ -4,10 +4,21 @@ import re
 from openpyxl import Workbook, load_workbook
 
 '''
-Lógica:
-1. Fijarse si la factura es en dolares o pesos
-2. Fijarse el tipo/codigo de la factura: Factura A o B, y codigo 01 o 06
+General: Extrae los montos de las facturas y los copia en un excel. Copia también el nombre de la factura que corresponde a ese monto.
+
+Versiones:
+-  v2: Adicionalmente al monto, copia el nombre de la correspondiente factura.
+
+Instrucciones básicas:
+-  Dentro de la carpeta donde va a guardarse el programa, crear una subcarpeta llamada "Archivos".  Guardar las facturas allí.
+-  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx".  En éste, se copiaran los montos de las facturas.
+-  Ajustar el directorio en la línea 44
+
+Contempla:
+-  Facturas en dólares o pesos.  
+-  Tipo/código de factura:  Factura A o B, y código 01 o 06.
 '''
+
 i = 1
 fila_excel = 1
 
