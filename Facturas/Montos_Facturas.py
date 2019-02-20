@@ -4,10 +4,12 @@ import re
 from openpyxl import Workbook, load_workbook
 
 '''
+General: Extrae los montos de las facturas y los copia en un excel. 
+
 Instrucciones básicas:
 -  Dentro de la carpeta donde va a guardarse el programa, crear una subcarpeta llamada "Archivos".  Guardar las facturas allí.
 -  Dentro de la carpeta donde va a guardarse el programa, crear un excel llamado "Contenedor.xlsx"
--  Ajustar el directorio en la línea 32
+-  Ajustar el directorio en la línea 37
 
 Contempla:
 -  Facturas en dólares o pesos.  
