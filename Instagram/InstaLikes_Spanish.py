@@ -21,7 +21,7 @@ login_link = driver.find_element_by_link_text('Inicia sesión').click()
 sleep(4)
 
 user_form = driver.find_element_by_name('username').send_keys('insta_dog123@fastmail.com')
-password_form = driver.find_element_by_name('password').send_keys('medallas')
+password_form = driver.find_element_by_name('password').send_keys('password')
 driver.find_element_by_xpath("//button[@type='submit']").click()
 
 sleep(4)
