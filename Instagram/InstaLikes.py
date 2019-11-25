@@ -21,7 +21,7 @@ sleep(4)
 
 # Fill in the Log-in information
 driver.find_element_by_name("username").send_keys("insta_dog123@fastmail.com")
-driver.find_element_by_name("password").send_keys("medallas")
+driver.find_element_by_name("password").send_keys("password")
 driver.find_element_by_xpath("//button[@type='submit']").click()
 sleep(4)
 
